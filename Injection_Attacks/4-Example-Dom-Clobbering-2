@@ -1,0 +1,9 @@
+?doc=<a id="CONFIG" href="https://example.com">Test</a>
+
+?doc=<a id="CONFIG" name="test">
+
+?doc=<a id="CONFIG" href="https://ysamm.com/sc.js" name="test_path">
+
+?doc=<a id="CONFIG" name="test"><a id="CONFIG" href="https://ysamm.com/sc.js" name="test_path">
+
+

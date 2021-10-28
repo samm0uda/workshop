@@ -1,0 +1,5 @@
+<html>
+<body><a href="/next" id="a_tag_1">next</a></body>
+<html>
+console.log(window.a_tag_1)
+

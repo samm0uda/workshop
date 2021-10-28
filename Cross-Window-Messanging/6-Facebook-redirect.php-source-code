@@ -1,0 +1,10 @@
+
+<script type="text/javascript">
+
+document.domain = 'facebook.com';
+
+opener.postMessage({"test":"test","type":"rp"},"https://our.alpha.facebook.com");
+
+opener.require("PaypalPopupManager").processPopup({"test":"test","type":"rp"});
+
+</script>

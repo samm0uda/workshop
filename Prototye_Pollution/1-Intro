@@ -1,0 +1,6 @@
+> x = {name:"you"}; Object.getPrototypeOf(x)
+----
+> x.__proto__;
+> o.__proto__.__proto__;
+----
+

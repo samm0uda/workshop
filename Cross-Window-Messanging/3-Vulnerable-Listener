@@ -1,0 +1,5 @@
+> function handle_evt(event){
+	if (event.data.document) {
+		document.getElementById("tracker").innerHTML = document; }}
+> addEventListener("message", handle_evt)
+

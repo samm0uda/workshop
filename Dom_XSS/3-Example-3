@@ -1,0 +1,3 @@
+if (document.referrer) { var tracking_data = Object.fromEntries((new URL(document.referrer)).searchParams.entries()); } // قراءة document.referrer اي الصفحة التي حولتنا إلى هنا
+if (typeof tracking_data.init__red_to_base === "string") {location.href = tracking_data.init__red_to_base}
+

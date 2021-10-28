@@ -1,0 +1,9 @@
+var socket = new WebSocket("wss://www.example.com/socketserver");
+
+socket.onopen = function (event) {
+  socket.send("get profile");
+};
+socket.onmessage = function (event) {
+  console.log(event.data);
+}
+

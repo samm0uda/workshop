@@ -1,0 +1,15 @@
+<html><head><div id="header"></div></head>
+<body>
+<form id="form" action="index.php">
+<input type="hidden" name="csrf_token" value="f546drf4dqk"/>
+<input type="hidden" name="time" value=""/>
+</form>
+<script>
+onmessage=(e) => {document.getElementById("header").innerHTML=e.data}
+setTimeout(function(){
+	form.time.value=Date.now();
+	form.submit()
+}, 10000);
+</script>
+</body>
+</html>

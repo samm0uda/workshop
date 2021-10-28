@@ -1,0 +1,6 @@
+> let person = {fullname: "Youssef", age: 22}
+> console.log( person.toString() )
+// "[object Object]" يظهر
+> person.__proto__.toString = ()=>{alert("تم تغيير المحتوى")}
+> console.log( person.toString() )
+// مربع تنبيه يظهر برسالة “تم تغيير المحتوى"٠

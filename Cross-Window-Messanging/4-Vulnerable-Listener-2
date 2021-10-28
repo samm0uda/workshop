@@ -1,0 +1,6 @@
+> function handle_evt(event){
+	let check = new RegExp("^https://.*google\\.com$")
+	if ( event.data.document && check.test(event.origin) ) {
+		document.getElementById("tracker").innerHTML = document; }}
+> addEventListener("message", handle_evt)
+

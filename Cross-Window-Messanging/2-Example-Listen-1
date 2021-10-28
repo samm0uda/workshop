@@ -1,0 +1,6 @@
+> wnd_opened = open("https://ysamm.com", "wnd") // فتح نافذة جديدة
+> function handler(event){
+	if (event.origin === "https://www.google.com" && event.source === wnd_opened) {
+		alert("Welcome " + event.data.name) }}
+> addEventListener("message", handler)
+

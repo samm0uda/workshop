@@ -1,0 +1,8 @@
+> let administrator = {name:"you", isAdmin:true}
+> let normal_user = {name:"me", isAdmin:false}
+> let user = {} // هذا المستخدم لم يتم تعريفه بعد
+> console.log( normal_user.isAdmin )
+> console.log( user.isAdmin )
+> window.__proto__.__proto__.__proto__.__proto__.isAdmin = true
+> console.log( user.isAdmin )
+> console.log( normal_user.isAdmin )

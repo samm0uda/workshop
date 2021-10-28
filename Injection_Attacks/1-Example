@@ -1,0 +1,20 @@
+<html><head><script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script></head>
+<body>
+<div class="header"><div id="tracker" class="tracker"></div></div>
+<script>
+var tracking_obj = Object.fromEntries((new URLSearchParams(location.search)).entries());
+if (tracking_obj.doc) {
+	clean = DOMPurify.sanitize(tracking_obj.doc);
+	document.getElementById("tracker").innerHTML = clean;
+}
+</script>
+<script>
+window.CONFIG = window.CONFIG || {version:1.2, test: false, test_path:"https://ysamm.com/test/script.js"};
+
+if (CONFIG.test && CONFIG.test_path) {
+  test_module = CONFIG.test_path.href
+  const script = document.createElement('script');
+  script.src = test_module;
+  document.body.appendChild(script);
+}
+</script></body></html>

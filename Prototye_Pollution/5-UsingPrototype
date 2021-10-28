@@ -1,0 +1,10 @@
+function addTrackingAttributes(elementObj){
+	var tracking_data = Object.fromEntries(new URLSearchParams (location.search).entries()); // تقوم بتحويل محتوى الكويري في الرابط الي كائن 
+	for(key in tracking_data){
+		elementObj.setAttribute(key, tracking_data[key]);
+	}
+}
+let image = document.createElement("img");
+image.setAttribute("src", "/validimage.png");
+addTrackingAttributes(image);
+

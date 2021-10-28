@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Page Proxy</title>
+    </head>
+    <body>
+        <form method="post" id="proxy_form">
+            <input type="hidden" autocomplete="off" id="signed_request" name="signed_request"/>
+        </form>
+        <script nonce="ziFUcuUt">
+            var frameName = window.location.href.split("#")[1]
+              , paramsReceived = !1
+              , retries = 200;
+            window.addEventListener("message", function(a) {
+                !paramsReceived && a.data.platformAppControllerGetFrameParamsResponse &&
+                 /^https:/.test(a.origin) && /\.facebook\.com$/.test(a.origin) &&
+                  a.data.name === frameName && (paramsReceived = !0,
+                submitForm(a.data.params.appTabUrl, a.data.params.signedRequest))
+            }, !1);
+            function submitForm(a, b) {
+                var c = document.getElementById("proxy_form")
+                  , d = document.getElementById("signed_request");
+                c != null && c instanceof HTMLFormElement && d != null && (c.setAttribute("action", a),
+                c.setAttribute("target", frameName),
+                d.setAttribute("value", b),
+                c.submit())
+            }
+            function waitForParams() {
+                /^app_runner_fb_https[0-9a-f]+$/.test(frameName) && (!paramsReceived && retries > 0 && (retries--,
+                window.parent.postMessage({
+                    platformAppControllerGetFrameParams: !0,
+                    name: frameName
+                }, "*"),
+                window.setTimeout(waitForParams, 100)))
+            }
+            waitForParams();
+        </script>
+    </body>
+</html>
+

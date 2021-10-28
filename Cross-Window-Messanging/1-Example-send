@@ -1,0 +1,3 @@
+> let msg = {name: "Youssef", age: 22}
+> opener.postMessage(msg, "https://ysamm.com")
+

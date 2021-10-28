@@ -1,0 +1,4 @@
+i._initializers.initWLog = function() {
+    var e, t, n, o, a, l, s, d, u, p, c;
+    if (t = i.url.parse(location.href),
+    document.referrer && (u = i.url.parse(document.referrer)),

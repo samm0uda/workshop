@@ -1,0 +1,9 @@
+var socket = new WebSocket("wss://redacted.facebook.com/ws/10213546546?lid=4546");
+
+socket.onopen = function (event) {
+  socket.send("");
+};
+socket.onmessage = function (event) {
+  console.log(event.data);
+}
+

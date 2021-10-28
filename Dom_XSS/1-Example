@@ -1,0 +1,3 @@
+let data = Object.fromEntries((new URLSearchParams(location.search)).entries()); // قراءة query من الرابط الحالي
+let nameElem = document.getElementById("welcome");
+nameElem.innerHTML = `<h1>Welcome ${data.name}</h1>`;

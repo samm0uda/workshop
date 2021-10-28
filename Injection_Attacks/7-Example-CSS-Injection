@@ -1,0 +1,11 @@
+<html><body>
+<form method="GET" action="/update_username.php">
+<input type="text" name="username" value="youssef"/>
+<input type="password" name="username" value="password"/>
+<input type="submit" name="submit"/> 
+</form>
+<script>
+let data = Object.fromEntries((new URLSearchParams(location.search)).entries()); // قراءة query من الرابط الحالي
+document.head.insertAdjacentHTML("beforeend",`<style>${decodeURIComponent(data.style)}</style>`);
+</script>
+</body></html>

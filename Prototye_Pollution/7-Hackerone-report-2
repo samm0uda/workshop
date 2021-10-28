@@ -1,0 +1,7 @@
+if (this.chrome = r.elem.fromObject({
+2    id: r.seqId('wistia_chrome_'),
+3    class: 'w-chrome',
+4    style: r.generate.relativeBlockCss(),
+5    tabindex: -1
+6})
+
